@@ -1,6 +1,5 @@
 from llm.model import ModelInterface
 from llm.dummymodel import DummyModel
-from llm.llama3model import Llama3Model
 from repository import save_document, get_documents
 
 def get_answer(question, chromaObject):
@@ -9,7 +8,7 @@ def get_answer(question, chromaObject):
         docs = chromaObject.get_context(question)
         
         # Instancia un objeto del modelo LLM
-        model: ModelInterface = Llama3Model()
+        model: ModelInterface = DummyModel()
         result = model.query(question, docs)
         
         save_document(question, result['response'], result['product'])
