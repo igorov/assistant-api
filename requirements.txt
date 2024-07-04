@@ -1,0 +1,10 @@
+flask
+flask-cors
+python-decouple
+python-dotenv
+requests
+langchain-nvidia-ai-endpoints
+chromadb
+google-cloud-firestore
+langchain-community
+tqdm
