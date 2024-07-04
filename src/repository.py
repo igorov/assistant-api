@@ -21,7 +21,7 @@ def save_document(query, response, product):
 
 def get_documents():
     try:
-        docs = db.collection(collection_name).stream()
+        docs = db.collection(collection_name).order_by('date', direction='DESCENDING').stream()
         return docs
     except Exception as e:
         print(f"Excepcion e repository: {e}")
